@@ -1,0 +1,122 @@
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 70%;
+  justify-content: center;
+  margin: auto;
+}
+ 
+.tabs label {
+  order: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition:  ease 0.3s;
+  background-color: black;
+  color: white;
+  width: 15%;
+  padding: 15px;
+  font-size: 20px;
+}
+
+@media(max-width:440px){
+  .tabs label{
+    width: 20%;
+    padding: 2px;
+  }
+
+  h3{
+    font-size: 20px;
+  }
+}
+
+ 
+.tabs .tab {
+  order: 9;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding: 7px;
+  background: #fff;
+}
+ 
+.tabs input[type="radio"] {
+  display: none;
+}
+ 
+.tabs input[type="radio"]:checked + label {
+    background-color: white;
+    color: black;
+}
+ 
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+ 
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: auto;
+  align-items: center;
+  background-color: blue;
+  background-image: url(/img/festival.jpg);
+  background-attachment: fixed;
+  background-size: contain;
+  font-family: monospace;
+}
+
+.tab{
+    display: flex;
+    flex-direction: column;
+    flex-flow: nowrap;
+}
+
+.entrada{
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comprarbtn{
+    color: white;
+    background-color: red;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+label{
+    width: 17%;
+}
+
+.impar{
+  background-color:rgba(199, 199, 199, 0.5);
+}
+
+.par{
+  background-color: rgba(59, 53, 53, 0.5);
+}
+
+h3{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+#titulo{
+  color: #fff;
+  background-color: black;
+  font-size: 15px;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 20%;
+  margin: auto;
+}
+
