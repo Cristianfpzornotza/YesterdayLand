@@ -1,0 +1,217 @@
+*{
+    color: black;
+}
+/*HEADER*/
+    /*CAROUSEL*/
+    #carousel{
+      width: 80%;
+      height: min-content;
+      margin-left: 10%;
+      margin-bottom: 20px;
+    }
+    body { margin: 0; } 
+      div#slider { overflow: hidden; } /* las imágenes no van a salir del márgen de la pantalla*/
+      div#slider figure img { width: 20%; float: left; }
+
+      div#slider figure { 
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        text-align: left;
+        font-size: 0;
+        animation: 30s slidy infinite; /*el movimiento se va a mantener de forma indefinida -infinito-*/
+      }
+
+
+      /*esta parte del código define el movimiento de las imágenes a la izquierda*/
+      @keyframes slidy {
+      0% { left: 0%; }
+      20% { left: 0%; }
+      25% { left: -100%; }
+      45% { left: -100%; }
+      50% { left: -200%; }
+      70% { left: -200%; }
+      75% { left: -300%; }
+      95% { left: -300%; }
+      100% { left: -400%; }
+      }
+    /*FIN CAROUSEL*/
+/*FIN HEADER*/
+
+/*BODY*/
+
+body{
+    background-image: url(/img/festival.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.main{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin-left: 5%;
+}
+    .card{
+        border: 3px solid grey;
+        width: 30%;
+        margin-bottom: 20px;
+        height: 300px;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }
+    .card img{
+        width: 100%;
+        height: 100%;
+    }    
+    .card p{
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        font-weight: bold;
+        color: white;
+        font-size: 20px;
+        opacity: 0;
+    }
+    .main div {
+        background: #000000;
+    }
+    .main img  {
+        opacity: 1;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+    .main img:hover {
+        opacity: .4;
+    }
+    .main img:hover+p{
+        opacity: 1;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+    /*FIN CARDS*/
+    /*CALENDARIO*/
+    .calendario{
+      justify-items: center;
+      padding: 10px;
+      justify-content: space-between;
+      flex-direction: column;
+      display: grid;
+      grid-template-columns: auto ;
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1;
+      background-color: white;
+      width: 95%;
+      margin-left: 1.7%;
+  }
+  .calendario div{
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      margin: 5px;
+      text-align: justify;
+      display: flex;
+  }
+  .calendario div div{
+      padding-left: 5%;
+      padding-right: 5%;
+      flex-direction: column;
+  }
+  .calendario div img{
+      width: 550px;
+  }
+  hr{
+      border: solid 1px rgb(184, 184, 184);
+      background-color: rgb(184, 184, 184);
+      width: 95%;    
+  }
+    /*FIN CALENDARIO*/
+/*FIN BODY*/
+
+/*FOOTER*/
+/*FIN FOOTER*/
+@media screen and (max-width: 1300px) {
+  .calendario div{
+    flex-direction: column;
+}
+.calendario iframe{
+    width: 600px;
+    margin: auto;
+}
+.calendario img{
+    margin: auto;
+}
+.calendario div div{
+    margin: auto;
+    padding: 0%;
+    text-align: center;
+}
+.calendario{
+  grid-column: 1 / span 2;
+}
+.calendario{
+  grid-column: 1 / span 1;
+}
+.calendario iframe{
+  width: 100%;
+}
+.calendario div img{
+  width: 100%;
+}
+
+.main{
+  grid-row: 3 / span 2;
+  grid-column: 1 / span 2;
+}
+.card{
+  width: 300px;
+  height: 300px;
+}
+}
+@media screen and (max-width: 1100px) {
+  .main{
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column: 1 / span 2;
+      grid-row: 4 / span 1;
+  }
+  .main h2{
+      grid-column: 1 / span 2;
+  }
+  .card{
+      width: 350px;
+      height: 350px;
+  }
+  #img{
+      height: 100%;
+      width: 100%;
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+  }
+  #carousel{
+    height: min-content;
+    
+  }
+}
+@media screen and (max-width: 900px) {
+  .main{
+      grid-template-columns: auto;
+  }
+  .main h2{
+      grid-column: 1 / span 1;
+  }
+  .card{
+      margin: auto;
+      margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  
+  .main{
+      grid-column: 1 / span 1;
+  }
+}
